@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
-import 'package:panucci_ristorante/components/drink_item.dart';
 import 'package:panucci_ristorante/components/food_item.dart';
-import 'package:panucci_ristorante/components/highlight_item.dart';
 
 class FoodMenu extends StatelessWidget {
   const FoodMenu({super.key});
@@ -33,7 +31,6 @@ class FoodMenu extends StatelessWidget {
                   itemTitle: items[index]['name'],
                   itemPrice: items[index]['price'],
                   imageURI: items[index]['image'],
-                  // itemDescription: items[index]['description'],
                 );
               },
               childCount: items.length,
