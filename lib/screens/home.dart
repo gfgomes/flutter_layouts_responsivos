@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/main_drawer.dart';
+import 'package:panucci_ristorante/screens/drink_menu.dart';
+import 'package:panucci_ristorante/screens/food_menu.dart';
 import 'package:panucci_ristorante/screens/highlights.dart';
 import 'package:panucci_ristorante/themes/app_colors.dart';
 
@@ -11,6 +13,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final List<Widget> pages = [
+    const Highlights(),
+    const FoodMenu(),
+    const DrinkMenu()
+  ];
+
   int _currentPage = 0;
   @override
   Widget build(BuildContext context) {
@@ -61,7 +69,7 @@ class _HomeState extends State<Home> {
           });
         },
       ),
-      body: Highlights(),
+      body: pages[_currentPage],
     );
   }
 }
