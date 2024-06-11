@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ristorante Panucci"),
-        backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+        backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
         actions: const <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
